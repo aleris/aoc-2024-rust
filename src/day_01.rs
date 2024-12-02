@@ -2,7 +2,7 @@ use std::fs::File;
 use std::io::{self, BufRead};
 use std::path::Path;
 
-const INPUT_DAY_01: &str = "./day01.txt";
+const INPUT_DAY_01: &str = "./day_01.txt";
 
 pub fn part1(input_file: &str) -> i32 {
     let (left, right) = input(input_file);
@@ -52,7 +52,7 @@ fn read_lines<P>(file_path: P) -> Vec<String> where P: AsRef<Path>, {
 
 #[cfg(test)]
 mod tests {
-    const INPUT_DAY_01_TEST: &str = "./day01_test.txt";
+    const INPUT_DAY_01_TEST: &str = "./day_01_test.txt";
 
     #[test]
     fn part1() {
