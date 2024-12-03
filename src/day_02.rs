@@ -15,7 +15,7 @@ pub fn part1(input_file: &str) -> usize {
 pub fn part2(input_file: &str) -> usize {
     let input = input(input_file);
     let result = input.iter().filter(|row| is_safe_dampened(row)).count();
-    println!("Day02 part1 = {}", result);
+    println!("Day02 part2 = {}", result);
     result
 }
 
@@ -97,18 +97,18 @@ mod tests {
 
     #[test]
     fn is_safe_test() {
-        let result = super::input(INPUT_DAY_02_TEST);
+        let input = super::input(INPUT_DAY_02_TEST);
         let expected = [true, false, false, false, false, true];
-        result.iter().zip(expected.iter()).for_each(|(r, e)| {
+        input.iter().zip(expected.iter()).for_each(|(r, e)| {
             assert_eq!(super::is_safe(r), *e, "is_safe failed for {:?}, expected {}", r, e);
         });
     }
 
     #[test]
     fn is_safe_dampened_test() {
-        let result = super::input(INPUT_DAY_02_TEST);
+        let input = super::input(INPUT_DAY_02_TEST);
         let expected = [true, false, false, true, true, true];
-        result.iter().zip(expected.iter()).for_each(|(r, e)| {
+        input.iter().zip(expected.iter()).for_each(|(r, e)| {
             assert_eq!(super::is_safe_dampened(r), *e, "is_safe_dampened failed for {:?}, expected {}", r, e);
         });
     }
